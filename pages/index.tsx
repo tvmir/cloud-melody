@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
+import Navbar from "../components/Navbar";
 
 const Home: NextPage = () => {
-  return <div className="text-3xl font-bold underline">Hello</div>;
+  return <div>hello</div>;
 };
 
 export default Home;
