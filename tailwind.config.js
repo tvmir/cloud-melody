@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "gradient-to-b":
-          "linear-gradient(to bottom,#291329 0,#290E29 10%,#1C071C 68%,#1C071C 100%,#151515 100%);",
+          "linear-gradient(to bottom,#1C071C 0,#1C071C 10%,#1C071C 68%,#1C071C 100%,#151515 100%);",
       },
     },
   },
