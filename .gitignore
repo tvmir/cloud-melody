@@ -34,4 +34,4 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-postcss.config.js
+/postcss.config.js
