@@ -1,11 +1,16 @@
+import { Playlist } from "@prisma/client";
 import React from "react";
 import PlaylistLayout from "../../components/PlaylistLayout";
 import PlaylistTable from "../../components/PlaylistTable";
 
-function Playlists() {
+interface Props {
+  playlist: Playlist;
+}
+
+function Playlists({ playlist }: any) {
   return (
     <PlaylistLayout
-      title="Wavy Tunes"
+      title="Type Beats"
       subtitle="Playlist"
       createdBy="TJ Jenk"
       image={

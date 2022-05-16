@@ -18,7 +18,7 @@ function PlaylistLayout({
   return (
     <div className="h-full overflow-y-auto">
       <div className="flex py-10 pl-3 items-end bg-gradient-to-b from-[#160f16] to-[#1d0d1d]">
-        <div className="p-5">
+        <div className="p-6">
           <Image
             src={image}
             alt="image"
@@ -27,8 +27,8 @@ function PlaylistLayout({
             className="box-border shadow-2xl rounded-xl"
           />
         </div>
-        <div className="py-8 px-2">
-          <div className="py-1">
+        <div className="py-9">
+          <div>
             <p className="text-xs font-semibold uppercase text-[#66636A]">
               {subtitle}
             </p>
@@ -38,7 +38,7 @@ function PlaylistLayout({
           <p className="text-xs font-semibold text-white">{createdBy}</p>
         </div>
       </div>
-      <div className="py-8 pr-9">{children}</div>
+      <div>{children}</div>
     </div>
   );
 }

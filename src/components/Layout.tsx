@@ -1,3 +1,4 @@
+import Player from "./Player";
 import Sidebar from "./Sidebar";
 
 function Layout({ children }: any) {
@@ -8,7 +9,9 @@ function Layout({ children }: any) {
       </div>
       <div className="ml-60 mb-24">
         <div className="h-[100vh]">{children}</div>
-        <div className="absolute left-0 bottom-0">Player</div>
+        <div className="w-full py-4 absolute left-0 bottom-0">
+          <Player />
+        </div>
       </div>
     </div>
   );

@@ -25,7 +25,7 @@ const menus: MenuProps[] = [
 function Sidebar() {
   return (
     <div className="w-full drop-shadow-sm">
-      <div className="h-[calc(100vh_-_100px)] bg-gradient-to-b from-[#1d0d1d] to-[#151515] px-7 text-[#847B8A]">
+      <div className="h-[calc(100vh_-_100px)] bg-violet-900 px-7 text-[#847B8A]">
         <div className="h-full">
           <div className="mb-6 py-24">
             <ul>
