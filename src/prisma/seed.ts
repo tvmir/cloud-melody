@@ -1,14 +1,13 @@
 import { PrismaClient } from "@prisma/client";
-import bcrypt from "bcrypt";
 
 const prisma = new PrismaClient();
 
 const artistData: { name: string; songs: any[] }[] = [
   {
-    name: "Drake",
+    name: "kujo & nayz",
     songs: [
       {
-        name: "Jungle",
+        name: "bracco.",
         duration: 360,
         audioUrl: "https://www.youtube.com/watch?v=00QRihPrS4Y",
         imgUrl:
@@ -41,29 +40,11 @@ async function run() {
     })
   );
 
-  const salt = bcrypt.genSaltSync();
-
-  const user = await prisma.user.upsert({
-    where: {
-      email: "test@test.com",
-    },
-    update: {},
-    create: {
-      firstName: "Josiah",
-      lastName: "Jenkins",
-      email: "test@test.com",
-      password: bcrypt.hashSync("password", salt),
-    },
-  });
-
   const songs = await prisma.song.findMany({});
 
   await prisma.playlist.create({
     data: {
       name: "Wavy Tunes",
-      user: {
-        connect: { id: user.id },
-      },
       songs: {
         connect: songs.map((song) => ({
           id: song.id,
