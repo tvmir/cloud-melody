@@ -18,7 +18,7 @@ function PlaylistLayout({
   return (
     <div className="h-full overflow-y-auto">
       <div className="flex py-10 pl-3 items-end bg-gradient-to-b from-[#160f16] to-[#1d0d1d]">
-        <div className="p-6">
+        <div className="p-5">
           <Image
             src={image}
             alt="image"

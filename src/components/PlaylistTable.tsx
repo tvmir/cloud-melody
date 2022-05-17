@@ -1,6 +1,5 @@
 import { Song } from "@prisma/client";
-import { BsFillPlayFill } from "react-icons/bs";
-import { AiOutlineClockCircle } from "react-icons/ai";
+
 import { useStoreActions } from "easy-peasy";
 
 interface Props {
@@ -11,7 +10,7 @@ function PlaylistTable() {
   const songs = new Array(10).fill(1).map((_, i) => `Song ${i + 1}`);
 
   return (
-    <div className="bg-transparent text-[#66636A] mt-0">
+    <div className="text-[#66636A] mt-0 bg-gradient-to-b">
       <div className="px-9 w-full">
         <div>
           <table>
