@@ -1,13 +1,11 @@
 import { Playlist } from "@prisma/client";
+import { NextApiRequest } from "next";
 import React from "react";
 import PlaylistLayout from "../../components/PlaylistLayout";
 import PlaylistTable from "../../components/PlaylistTable";
+import prisma from "../../lib/prisma";
 
-interface Props {
-  playlist: Playlist;
-}
-
-function Playlists({ playlist }: any) {
+function Playlists() {
   return (
     <PlaylistLayout
       title="Type Beats"
@@ -21,5 +19,16 @@ function Playlists({ playlist }: any) {
     </PlaylistLayout>
   );
 }
+
+// export async function getServerSideProps({ query }: any) {
+//   const [playlist] = await prisma.playlist.findMany();
+
+//   console.log(playlist);
+//   return {
+//     props: {
+//       playlist,
+//     },
+//   };
+// }
 
 export default Playlists;

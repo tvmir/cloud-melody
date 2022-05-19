@@ -5,6 +5,7 @@ import {
   RangeSliderTrack,
 } from "@chakra-ui/react";
 import { Artist, Song } from "@prisma/client";
+import { useStoreActions } from "easy-peasy";
 import { useEffect, useRef, useState } from "react";
 import ReactHowler from "react-howler";
 import {
@@ -33,6 +34,7 @@ function Player({ songs, active }: Props) {
   );
   const activeRef = useRef<ReactHowler>(null);
   const repeatRef = useRef(isRepeated);
+  const setActive = useStoreActions((state: any) => state.changeCurrSong);
 
   const onPrevSong = () => {
     setCurrSong((song) => {
@@ -106,6 +108,10 @@ function Player({ songs, active }: Props) {
   useEffect(() => {
     repeatRef.current = isRepeated;
   }, [isRepeated]);
+
+  // useEffect(() => {
+  //   setActive(songs[currSong]);
+  // }, [() => {}, [currSong, setActive, songs]]);
 
   return (
     <div>

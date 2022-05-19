@@ -9,7 +9,8 @@ const artistData: { name: string; songs: any[] }[] = [
       {
         name: "bracco.",
         duration: 360,
-        audioUrl: "https://www.youtube.com/watch?v=00QRihPrS4Y",
+        audioUrl:
+          "https://www.dropbox.com/s/h4lzl2qmrqo0uas/FREE_Kanye_West_x_Jay_Z_Type_Beat_%28getmp3.pro%29.mp3?dl=0",
         imgUrl:
           "https://i1.sndcdn.com/artworks-liGzyRADoyQ35Hz0-h3HwDw-t500x500.jpg",
       },

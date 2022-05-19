@@ -25,10 +25,7 @@ function PlaylistTable() {
             </thead>
             <tbody>
               {songs.map((song, i) => (
-                <tr
-                  key={song}
-                  className="cursor-pointer hover:bg-[#311F31] duration-500"
-                >
+                <tr className="cursor-pointer hover:bg-[#311F31] duration-500">
                   <td className="text-[#a99dad] text-sm font-semibold py-2">
                     {i + 1}
                   </td>
